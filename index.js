@@ -11,6 +11,8 @@ app.use(express.static('public'));
 app.use(express.static('public/Pages/Places/placesPageJS'));
 app.use(express.json({limit: '1mb'}));
 
+console.log('db name ' + process.env.DATA_BASE)
+
 const placeRoutes = require('./routes/place');
 
 app.use('/place', placeRoutes)
