@@ -3,7 +3,10 @@ const app = express();
 const mongoose = require('mongoose');
 require('dotenv/config'); 
 
-app.listen(5000, () => console.log('listening at 5000'));
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+    console.log('listening at ' + port);
+});
 app.use(express.static('public'));
 app.use(express.static('public/Pages/Places/placesPageJS'));
 app.use(express.json({limit: '1mb'}));
@@ -31,7 +34,7 @@ app.get('/appi', (req, resp) => {
     resp.send('appi');
 })
 
-mongoose.connect(process.env.DataBaseConnection, { useNewUrlParser: true, useUnifiedTopology: true}, () => {
+mongoose.connect(process.env.DATA_BASE, { useNewUrlParser: true, useUnifiedTopology: true}, () => {
     
 })
 
