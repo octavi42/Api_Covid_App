@@ -1,0 +1,50 @@
+const express = require('express');
+
+const router = express.Router();
+
+var citys = [
+    'alba',
+    'arad',
+    'arges',
+    'bacau',
+    'bihor',
+    'bistrita-nasaud',
+    'botosani',
+    'brasov',
+    'braila',
+    'buzau',
+    'caras-severin',
+    'calarasi',
+    'cluj',
+    'constanta',
+    'covasna',
+    'dambovita',
+    'dolj',
+    'galati',
+    'giurgiu',
+    'gorj',
+    'harghita',
+    'hunedoara',
+    'ialomita',
+    'iasi',
+    'ilfov',
+    'maramures',
+    'mehedinti',
+    'mures',
+    'neamt',
+    'olt',
+    'prahova',
+    'satu-mare',
+    'salaj',
+    'sibiu',
+    'suceava',
+    'teleorman',
+    'timis',
+    'tulcea',
+    'vaslui',
+    'valcea',
+    'vrancea',
+    'bucuresti'
+];
+
+module.exports.citys = citys;
