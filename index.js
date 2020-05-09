@@ -11,7 +11,7 @@ app.use(express.static('public'));
 app.use(express.static('public/Pages/Places/placesPageJS'));
 app.use(express.json({limit: '1mb'}));
 
-//console.log('db name ' + process.env.DATA_BASE)
+// console.log('db name ' + process.env.DATA_BASE)
 
 const placeRoutes = require('./routes/place');
 
@@ -36,9 +36,9 @@ app.get('/appi', (req, resp) => {
     resp.send('appi');
 })
 
-// mongoose.connect(process.env.DATA_BASE, { useNewUrlParser: true, useUnifiedTopology: true}, () => {
+mongoose.connect(process.env.DATA_BASE, { useNewUrlParser: true, useUnifiedTopology: true}, () => {
     
-// })
+})
 
 var db = mongoose.connection;
 
