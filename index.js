@@ -1,46 +1,46 @@
 const express = require('express');
 const app = express();
-// const mongoose = require('mongoose');
-// require('dotenv/config'); 
+const mongoose = require('mongoose');
+require('dotenv/config'); 
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log('listening at ' + port);
 });
 app.use(express.static('public'));
-// app.use(express.static('public/Pages/Places/placesPageJS'));
-// app.use(express.json({limit: '1mb'}));
+app.use(express.static('public/Pages/Places/placesPageJS'));
+app.use(express.json({limit: '1mb'}));
 
-// const placeRoutes = require('./routes/place');
+const placeRoutes = require('./routes/place');
 
-// app.use('/place', placeRoutes)
+app.use('/place', placeRoutes)
 
-// //console.log('')
+//console.log('')
 
-// app.post('/api', (request, response) => {
-//     console.log('got request')
-//     console.log(request.body);
+app.post('/api', (request, response) => {
+    console.log('got request')
+    console.log(request.body);
 
-//     const data = request.body;
-//     response.json({
-//         status: 'SUCCESS', 
-//         data: data
-//     });
+    const data = request.body;
+    response.json({
+        status: 'SUCCESS', 
+        data: data
+    });
 
-//     response.send('api');
-// });
+    response.send('api');
+});
 
-// app.get('/appi', (req, resp) => {
-//     resp.send('appi');
-// })
+app.get('/appi', (req, resp) => {
+    resp.send('appi');
+})
 
-// mongoose.connect(process.env.DATA_BASE, { useNewUrlParser: true, useUnifiedTopology: true}, () => {
+mongoose.connect(process.env.DATA_BASE, { useNewUrlParser: true, useUnifiedTopology: true}, () => {
     
-// })
+})
 
-// var db = mongoose.connection;
+var db = mongoose.connection;
 
-// if(!db)
-//     console.log("Error connecting db")
-// else
-//     console.log("Db connected successfully")
+if(!db)
+    console.log("Error connecting db")
+else
+    console.log("Db connected successfully")
