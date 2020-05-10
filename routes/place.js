@@ -59,7 +59,8 @@ for (const type of citysArrayFS.citys) {
         const post = new Model({
             phoneId: req.body.phoneId,
             latitude: req.body.latitude,
-            longitude: req.body.longitude
+            longitude: req.body.longitude,
+            locationDate: req.body.locationDate
         });
 
         afterTime(type, 4000, req.body.phoneId, req.body.latitude, req.body.longitude)
