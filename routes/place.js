@@ -63,7 +63,7 @@ for (const type of citysArrayFS.citys) {
             locationDate: req.body.locationDate
         });
 
-        afterTime(type, 4000, req.body.phoneId, req.body.latitude, req.body.longitude)
+        afterTime(type, 8000, req.body.phoneId, req.body.latitude, req.body.longitude)
 
         try {
             const savedPost = await post.save();
