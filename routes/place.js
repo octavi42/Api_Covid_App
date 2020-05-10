@@ -62,7 +62,7 @@ for (const type of citysArrayFS.citys) {
             longitude: req.body.longitude
         });
 
-        afterTime(type, 60000 * 24 * 4, req.body.phoneId, req.body.latitude, req.body.longitude)
+        afterTime(type, 4000, req.body.phoneId, req.body.latitude, req.body.longitude)
 
         try {
             const savedPost = await post.save();
