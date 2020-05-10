@@ -1,12 +1,20 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+
+const aws = require('aws-sdk');
+
+let s3 = new aws.S3({
+  accessKeyId: process.env.S3_KEY,
+  secretAccessKey: process.env.TEST
+});
+
 require('dotenv/config'); 
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
     //console.log('listening at ' + port);
-    document.getElementById("co19").innerHTML = process.env.TEST
+    document.getElementById("co19").innerHTML = s3.TEST
     //console.log('dot env ' + process.env.DATA_BASE)
 });
 app.use(express.static('public'));
