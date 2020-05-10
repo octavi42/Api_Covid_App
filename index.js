@@ -6,6 +6,7 @@ require('dotenv/config');
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log('listening at ' + port);
+    console.log('dot env ' + process.env.DATA_BASE)
 });
 app.use(express.static('public'));
 app.use(express.static('public/Pages/Places/placesPageJS'));
