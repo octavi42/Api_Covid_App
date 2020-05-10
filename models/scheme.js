@@ -4,10 +4,10 @@ const citysArrayFS = require('./../citys');
 const places = require('../routes/place');
 
 const postScheme = mongoose.Schema({
-    phoneId: UUID,
+    //phoneId: UUID,
     latitude: Number,
     longitude: Number,
-    countDown: setInterval(timeIt, 1000)
+    //countDown: setInterval(timeIt, 1000)
 });
 
 function timeIt(){
