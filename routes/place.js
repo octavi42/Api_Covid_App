@@ -14,7 +14,7 @@ const postScheme = mongoose.Schema({
     phoneId: String,
     latitude: Number,
     longitude: Number,
-    locationDate: Date
+    locationDate: Date.now
 });
 
 router.get('/', (req, res) => {
