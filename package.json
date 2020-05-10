@@ -10,7 +10,7 @@
     "heroku": "^7.40.0",
     "heroku-dotenv": "^0.4.1",
     "mongodb": "^3.5.5",
-    "mongoose": "^5.9.5"
+    "mongoose": "^5.9.13"
   },
   "devDependencies": {},
   "scripts": {
