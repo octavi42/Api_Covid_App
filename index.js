@@ -46,7 +46,7 @@ app.get('/appi', (req, resp) => {
     resp.send('appi');
 })
 
-mongoose.connect('mongodb+srv://user1:User1@cluster0-h3agu.gcp.mongodb.net/RoCo19Database?retryWrites=true&w=majorityDATA_BASE=', { useNewUrlParser: true, useUnifiedTopology: true}, () => {
+mongoose.connect('mongodb+srv://user1:User1@cluster0-h3agu.gcp.mongodb.net/RoCo19Database?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true}, () => {
     
 })
 
