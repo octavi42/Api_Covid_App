@@ -14,7 +14,8 @@ const postScheme = mongoose.Schema({
     phoneId: String,
     latitude: Number,
     longitude: Number,
-    locationDate: String
+    stringDate: String,
+    intDate: Number
 });
 
 router.get('/', (req, res) => {
@@ -60,10 +61,12 @@ for (const type of citysArrayFS.citys) {
             phoneId: req.body.phoneId,
             latitude: req.body.latitude,
             longitude: req.body.longitude,
-            locationDate: req.body.locationDate
+            stringDate: req.body.stringDate,
+            intDate: req.body.intDate
+
         });
 
-        afterTime(type, 8000, req.body.phoneId, req.body.latitude, req.body.longitude)
+        afterTime(type, 1000 * 60 * 24 * 4, req.body.phoneId, req.body.latitude, req.body.longitude)
 
         try {
             const savedPost = await post.save();
